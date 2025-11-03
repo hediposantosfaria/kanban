@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "ea523f4a-c737-4f63-b487-ba3ed147ab7a",
+		"name": "Kanban Export",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15934497"
+	},
+	"item": [
+		{
+			"name": "Responsáveis",
+			"item": [
+				{
+					"name": "Consultar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/responsaveis",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"responsaveis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/responsaveis/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"responsaveis",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Jonas\"\n    ,\"email\": \"jonas@empresa.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/responsaveis",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"responsaveis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Jonas B\"\n    ,\"email\": \"jonas@empresa.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/responsaveis/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"responsaveis",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/responsaveis/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"responsaveis",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projetos",
+			"item": [
+				{
+					"name": "Consultar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/projetos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projetos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/projetos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projetos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"XPTO\"\n    ,\"status\": \"B\"\n    ,\"inicioPrevisto\":\"2025-12-02\"\n    ,\"terminoPrevisto\":\"\"\n    ,\"inicioRealizado\":\"\"\n    ,\"terminoRealizado\":\"\"\n    ,\"responsavelId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/projetos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projetos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"XPTO Beta\"\n    ,\"status\": \"B\"\n    ,\"inicioPrevisto\":\"2025-12-02\"\n    ,\"terminoPrevisto\":\"\"\n    ,\"inicioRealizado\":\"\"\n    ,\"terminoRealizado\":\"\"\n    ,\"responsavelId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/projetos/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projetos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/projetos/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projetos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

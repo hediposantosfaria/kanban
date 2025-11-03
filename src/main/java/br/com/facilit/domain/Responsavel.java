@@ -1,46 +1,23 @@
 package br.com.facilit.domain;
 
-import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+import lombok.*;
 
+import javax.persistence.*;
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "responsavel", uniqueConstraints = {
-        @UniqueConstraint(name = "uk_responsavel_email", columnNames = "email")
-})
+@Table(name = "responsavel")
 public class Responsavel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
     private String nome;
 
-    @Email
-    @NotBlank
     private String email;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
